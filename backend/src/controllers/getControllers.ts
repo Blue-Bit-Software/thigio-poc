@@ -7,7 +7,7 @@ import { sendTransaction, checkEmptyRequestBody } from '../business/accessManage
  * @param res Response of the request.
  * @returns Returns the transaction receipt if the transaction was successful.
  */
-export const getDataSendController = async (req: Request, res: Response) => {
+export const dataSendController = async (req: Request, res: Response) => {
    const dataToSend: string = req.body;
 
    if (checkEmptyRequestBody(dataToSend)) return res.status(400).json({ message: 'Empty request body' });

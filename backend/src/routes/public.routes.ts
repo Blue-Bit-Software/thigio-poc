@@ -1,8 +1,8 @@
 import { Router } from "express";
-import { getDataSendController } from "../controllers/getControllers";
+import { dataSendController } from "../controllers/getControllers";
 
 const router = Router();
 
-router.post('/getblock', getDataSendController);
+router.post('/save', dataSendController);
 
 export default router;
