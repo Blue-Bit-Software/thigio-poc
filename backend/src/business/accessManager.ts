@@ -31,6 +31,7 @@ export const sendTransaction = async (valueToSend: string) => {
         const txData = {
             from: senderAddress,
             to: recipientAddress,
+            data: web3.utils.toHex(valueToSend),
             gasPrice: gasPrice,
             gas: gasLimit,
         };
