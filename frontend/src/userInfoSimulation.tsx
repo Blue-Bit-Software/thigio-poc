@@ -13,6 +13,7 @@ export const SendData = () => {
     const [transaction, setTransaction] = useState(JSON.stringify(mockJson));
 
     const handleGetInfo = async (): Promise<void> => {
+        setTransaction('Waiting for response...')
         const res = await sendUserInfo(mockJson);
         setTransaction(JSON.stringify(res));
     }

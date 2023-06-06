@@ -13,12 +13,12 @@
 }
 
 textarea {
-  width: 400px;
-  height: 200px;
+  width: 40vw;
+  height: 30vh;
   margin-bottom: 20px;
   resize: none;
   border-radius: 5px;
-  font-size: larger;
+  font-size: x-large;
 }
 
 button {
