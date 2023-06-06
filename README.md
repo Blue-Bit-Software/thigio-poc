@@ -26,7 +26,7 @@ npm install
 
 ```
 cd backend
-make run
+npm start
 ```
 
 ## Run local frontend
