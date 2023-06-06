@@ -1,12 +1,12 @@
 import express from 'express';
 import cors from 'cors';
-import { getDataSendController } from './controllers/getControllers';
+import { dataSendController } from './controllers/getControllers';
 
 require('dotenv').config();
 const app = express();
 
 // Settings
-app.set('port', process.env.PORT ?? 4000);
+app.set('port', 4000);
 
 // Middlewares
 app.use(express.urlencoded({ extended: true }))
@@ -18,7 +18,7 @@ app.use(cors(
 ));
 
 // Routes
-app.use(getDataSendController);
+app.use(dataSendController);
 
 app.listen(app.get('port'), () => {
     console.log(`Server on port ${app.get('port')}`);
