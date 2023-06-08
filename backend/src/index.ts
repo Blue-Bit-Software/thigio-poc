@@ -55,10 +55,13 @@ export const sendTransaction = async (valueToSend: string) => {
 };
 // Routes
 app.use('/save',(req,res) => {
-   const rest = sendTransaction(req.body).then((result)=>{
-        res.send(rest);
-   })
-});
+    const rest = sendTransaction(req.body).then((res) => {
+          console.log(res);
+             return res;
+    })
+     res.send(rest);
+ });
+ 
 app.listen(app.get('port'), () => {
     console.log(`Server on port ${app.get('port')}`);
 });
